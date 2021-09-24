@@ -1,0 +1,10 @@
+import { fact } from './fact';
+import { gcd } from './gcd';
+import hanpu from './hanpu';
+import { lcm } from './lcm';
+import { nCr } from './nCr';
+import { nCrs } from './nCrs';
+import { nPr } from './nPr';
+import { quotient } from './quotient';
+import { reduce } from './reduce';
+export { gcd, fact, lcm, nCr, nCrs, nPr, quotient, reduce, hanpu };
