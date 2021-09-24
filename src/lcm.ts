@@ -1,5 +1,5 @@
 import { curry2 } from './Curry';
-import { gcd } from './gcd';
+import gcd from './gcd';
 export interface LCM {
     (x: number, r: number): number;
     (x: number): (r: number) => number;
@@ -9,7 +9,7 @@ export interface LCM {
  * @param  {number} n
  * @param  {number} r
  */
-export const lcm = curry2(function (n: number, r: number) {
+const lcm = curry2(function (n: number, r: number) {
     if (n === 0 || r === 0) {
         return 0;
     }
@@ -21,3 +21,4 @@ export const lcm = curry2(function (n: number, r: number) {
     }
     return (n / gcd(n, r)) * r;
 }) as LCM;
+export default lcm;

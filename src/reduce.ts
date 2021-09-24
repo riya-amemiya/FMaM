@@ -1,5 +1,5 @@
 import { curry2 } from './Curry';
-import { gcd } from './gcd';
+import gcd from './gcd';
 export interface REDUCE {
     (x: number, y: number): {
         x: number;
@@ -15,10 +15,11 @@ export interface REDUCE {
  * @param  {number} x
  * @param  {number} y
  */
-export const reduce = curry2(function (x: number, y: number) {
+const reduce = curry2(function (x: number, y: number) {
     if (x === 0 || y === 0) {
         return { x: NaN, y: NaN };
     }
     let n = gcd(x, y);
     return { x: x / n, y: y / n, gcd: gcd(x, y) };
 }) as REDUCE;
+export default reduce;

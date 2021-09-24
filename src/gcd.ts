@@ -8,7 +8,7 @@ export interface GCD {
  * @param  {number} x
  * @param  {number} y
  */
-export const gcd = curry2(function (x: number, y: number) {
+const gcd = curry2(function (x: number, y: number) {
     if (x === 0 || y === 0) return 0;
     //最大公約数
     let r: number, tmp: number;
@@ -26,3 +26,4 @@ export const gcd = curry2(function (x: number, y: number) {
     }
     return x;
 }) as GCD;
+export default gcd;

@@ -1,5 +1,5 @@
 import { curry3 } from './Curry';
-import { reduce } from './reduce';
+import reduce from './reduce';
 export interface HANPU {
     (
         n: number,

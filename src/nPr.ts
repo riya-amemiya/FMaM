@@ -9,7 +9,7 @@ export interface NPR {
  * @param  {number} n
  * @param  {number} r
  */
-export const nPr = curry2(function (n: number, r: number) {
+const nPr = curry2(function (n: number, r: number) {
     //nPr
     if (n === 0 || r === 0) {
         return NaN;
@@ -34,3 +34,4 @@ export const nPr = curry2(function (n: number, r: number) {
     }
     return y;
 }) as NPR;
+export default nPr;

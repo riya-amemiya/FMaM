@@ -6,7 +6,7 @@ export interface FACT {
  * @param  {number} x
  * @param  {number} y
  */
-export const fact = ((x: number, y: number = 1): number => {
+const fact = ((x: number, y: number = 1): number => {
     if (x === 0 || x < y) {
         if (y === 0) {
             return NaN;
@@ -16,3 +16,4 @@ export const fact = ((x: number, y: number = 1): number => {
         return x * fact(x - 1, y);
     }
 }) as FACT;
+export default fact;

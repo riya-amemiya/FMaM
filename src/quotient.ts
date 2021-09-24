@@ -14,9 +14,10 @@ export interface QUOTIENT {
  * @param  {number} x
  * @param  {number} y
  */
-export const quotient = curry2(function (x: number, y: number) {
+const quotient = curry2(function (x: number, y: number) {
     return {
         answer: (x - (x % y)) / y,
         surplus: (x % y) + 0,
     };
 }) as QUOTIENT;
+export default quotient;

@@ -8,7 +8,7 @@ export interface NCR {
  * @param  {number} n
  * @param  {number} r
  */
-export const nCr = curry2(function (n: number, r: number) {
+const nCr = curry2(function (n: number, r: number) {
     //nCr
     if (n === 0 || r === 0) {
         return NaN;
@@ -39,3 +39,4 @@ export const nCr = curry2(function (n: number, r: number) {
     y /= age;
     return y;
 }) as NCR;
+export default nCr;
