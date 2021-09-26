@@ -1,10 +1,40 @@
 interface CURRY3 {
-    <T extends (a: A, b: B, c: C) => ReturnType<T>, A, B, C>(fn: T): {
+    <T extends (a: A, b: B, c: C) => ReturnType<T>, A extends any, B extends any, C extends any>(fn: T): {
         (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]): ReturnType<T>;
         (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): (c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
         (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
     };
-    <T extends <A, B, C>(a: A, b: B, c: C) => ReturnType<T>>(fn: T): {
+    <T extends <A extends any, B extends any, C extends any>(a: A, b: B, c: C) => ReturnType<T>>(fn: T): {
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]): ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): (c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+    };
+    <T extends <A extends any>(a: A, b: B, c: C) => ReturnType<T>, B extends any, C extends any>(fn: T): {
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]): ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): (c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+    };
+    <T extends <A extends any, B extends any>(a: A, b: B, c: C) => ReturnType<T>, C extends any>(fn: T): {
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]): ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): (c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+    };
+    <T extends <A extends any, C extends any>(a: A, b: B, c: C) => ReturnType<T>, B extends any>(fn: T): {
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]): ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): (c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+    };
+    <T extends <B extends any>(a: A, b: B, c: C) => ReturnType<T>, A extends any, C extends any>(fn: T): {
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]): ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): (c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+    };
+    <T extends <B extends any, C extends any>(a: A, b: B, c: C) => ReturnType<T>, A extends any>(fn: T): {
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]): ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): (c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+        (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
+    };
+    <T extends <C extends any>(a: A, b: B, c: C) => ReturnType<T>, A extends any, B extends any>(fn: T): {
         (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]): ReturnType<T>;
         (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): (c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;
         (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1], c: ArgumentTypes<typeof fn>[2]) => ReturnType<T>;

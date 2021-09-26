@@ -1,0 +1,31 @@
+import { FMaM } from '../../build';
+
+const fn_test = <X extends unknown[][]>(x: X) => {
+    for (const i of x) {
+        if (typeof i[0] != 'object' && !Array.isArray(i[0])) {
+            if (!(i[0] === i[1])) {
+                throw `Error x:${i[0]},y:${i[1]}`;
+            }
+        } else if (Array.isArray(i[0])) {
+            for (let n = 0; n < i[0].length; n++) {
+                if (!(JSON.stringify(i[n]) === JSON.stringify(i[i[0].length < n + 1 ? n + 1 : 0]))) {
+                    throw `Error x:${i[0]},y:${i[1]}`;
+                }
+            }
+        }
+    }
+};
+type AtLeast2<T> = [T, T, ...T[]];
+const test: AtLeast2<number | number[] | unknown[]>[] = [
+    [FMaM.gcd(8, 9), 1],
+    [FMaM.fact(3), 6],
+    [FMaM.gcd(9, 3), 3],
+    [FMaM.hanpu(5, 2, { x: 1, y: 4 }), [135, 512]],
+    [FMaM.lcm(8, 9), 72],
+    [FMaM.nCr(81, 2), 3240],
+    [FMaM.nCr(4, 3), 4],
+    [FMaM.getArraysIntersect([9, 313134], [3109, 9]), [9]],
+    [FMaM.getArraysDiff([0, 1, 2, 3, 4], [0, 1, 2, 3, 4, 5, 6]), [5, 6]],
+];
+
+fn_test(test);

@@ -1,13 +1,7 @@
 import { curry2 } from './Curry';
 export interface QUOTIENT {
-    (x: number, y: number): {
-        answer: number;
-        surplus: number;
-    };
-    (x: number): (y: number) => {
-        answer: number;
-        surplus: number;
-    };
+    (x: number, y: number): number[];
+    (x: number): (y: number) => number[];
 }
 /**
  * あまりの割り算
@@ -15,9 +9,6 @@ export interface QUOTIENT {
  * @param  {number} y
  */
 const quotient = curry2(function (x: number, y: number) {
-    return {
-        answer: (x - (x % y)) / y,
-        surplus: (x % y) + 0,
-    };
+    return [(x - (x % y)) / y, (x % y) + 0];
 }) as QUOTIENT;
 export default quotient;

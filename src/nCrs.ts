@@ -13,6 +13,8 @@ const nCrs = curry2(function (n: number, r: number) {
     if (n === 0 || r === 0) {
         return NaN;
     }
-    return nCr(n + r - 1, r);
+    const y = nCr(n + r - 1, r);
+    if (1 > y) return 0;
+    return y;
 }) as NCRS;
 export default nCrs;

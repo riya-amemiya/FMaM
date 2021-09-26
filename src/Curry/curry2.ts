@@ -1,19 +1,19 @@
 export interface CURRY2 {
-    <T extends (a: A, b: B) => ReturnType<T>, A, B>(fn: T): {
+    <T extends (a: A, b: B) => ReturnType<T>, A extends any, B extends any>(fn: T): {
         (a: ArgumentTypes<typeof fn>[0], b: ArgumentTypes<typeof fn>[1]): ReturnType<T>;
         (a: ArgumentTypes<typeof fn>[0]): (b: ArgumentTypes<typeof fn>[1]) => ReturnType<T>;
     };
-    <T extends <A, B>(a: A, b: B) => ReturnType<T>>(fn: T): {
+    <T extends <A extends any, B extends any>(a: A, b: B) => ReturnType<T>>(fn: T): {
         <A, B>(a: A, b: B): ReturnType<T>;
         <A>(a: A): <B>(b: B) => ReturnType<T>;
     };
-    <T extends <A>(a: A, b: B) => ReturnType<T>, B>(fn: T): {
+    <T extends <A extends any>(a: A, b: B) => ReturnType<T>, B extends any>(fn: T): {
         <A>(a: A, b: ArgumentTypes<typeof fn>[1]): ReturnType<T>;
         <A>(a: A): (b: ArgumentTypes<typeof fn>[1]) => ReturnType<T>;
     };
-    <T extends <B>(a: A, b: B) => ReturnType<T>, A>(fn: T): {
+    <T extends <B extends any>(a: A, b: B) => ReturnType<T>, A extends any>(fn: T): {
         <B>(a: ArgumentTypes<typeof fn>[0], b: B): ReturnType<T>;
-        (a: ArgumentTypes<typeof fn>[0]): <B>(b: B) => ReturnType<T>;
+        <B>(a: ArgumentTypes<typeof fn>[0]): (b: B) => ReturnType<T>;
     };
 }
 export type ArgumentTypes<F extends Function> = F extends (...args: infer A) => any ? A : never;

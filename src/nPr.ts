@@ -32,6 +32,7 @@ const nPr = curry2(function (n: number, r: number) {
             y *= n;
         }
     }
+    if (1 > y) return 0;
     return y;
 }) as NPR;
 export default nPr;

@@ -1,4 +1,5 @@
 import { curry2 } from './Curry';
+import nPr from './nPr';
 export interface NCR {
     (n: number, r: number): number;
     (n: number): (r: number) => number;
@@ -10,33 +11,13 @@ export interface NCR {
  */
 const nCr = curry2(function (n: number, r: number) {
     //nCr
-    if (n === 0 || r === 0) {
-        return NaN;
-    }
-    let x = 0,
-        z = r,
-        y = n,
-        age = 1;
-    while (x == 0) {
-        if (r == 1) {
-            y *= r;
-        }
-        r--;
-        if (r == 0) {
-            x++;
-        } else {
-            n--;
-            if (n == 0) {
-                x++;
-                break;
-            }
-            y *= n;
-        }
-    }
-    for (let i = 2; i <= z; i++) {
+    let y = nPr(n, r);
+    let age = 1;
+    for (let i = 2; i <= r; i++) {
         age *= i;
     }
     y /= age;
+    if (1 > y) return 0;
     return y;
 }) as NCR;
 export default nCr;
