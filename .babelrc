@@ -32,10 +32,6 @@
             {
                 "spec": true,
                 "modules": "commonjs",
-                "targets": {
-                    "node": "current",
-                    "esmodules": true
-                },
                 "shippedProposals": true
             }
         ],

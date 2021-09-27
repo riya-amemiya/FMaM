@@ -12,11 +12,15 @@ const fn_test = <X extends unknown[][]>(x: X) => {
                     throw `Error x:${i[0]},y:${i[1]}`;
                 }
             }
+        } else if (typeof i[0] === 'boolean') {
+            if (!i[0] && i[1]) {
+                throw `Error x:${i[0]},y:${i[1]}`;
+            }
         }
     }
 };
 type AtLeast2<T> = [T, T, ...T[]];
-const test: AtLeast2<number | number[] | unknown[]>[] = [
+const test: AtLeast2<number | number[] | unknown[] | boolean>[] = [
     [FMaM.gcd(8, 9), 1],
     [FMaM.fact(3), 6],
     [FMaM.gcd(9, 3), 3],
@@ -26,6 +30,8 @@ const test: AtLeast2<number | number[] | unknown[]>[] = [
     [FMaM.nCr(4, 3), 4],
     [FMaM.getArraysIntersect([9, 313134], [3109, 9]), [9]],
     [FMaM.getArraysDiff([0, 1, 2, 3, 4], [0, 1, 2, 3, 4, 5, 6]), [5, 6]],
+    [FMaM.isDouble(0.1), true],
+    [FMaM.isDouble(1), false],
 ];
 
 fn_test(test);

@@ -4,6 +4,7 @@ import gcd from './gcd';
 import getArraysDiff from './getArraysDiff';
 import getArraysIntersect from './getArraysIntersect';
 import hanpu from './hanpu';
+import isDouble from './isDouble';
 import lcm from './lcm';
 import max from './max';
 import min from './min';
@@ -27,5 +28,6 @@ const FMaM = {
     max,
     min,
     arraysJoin,
+    isDouble,
 };
 export { FMaM };
