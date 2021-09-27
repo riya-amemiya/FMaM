@@ -10,7 +10,7 @@
         "build": "yarn typescript && yarn babel && yarn uglifyjs",
         "uglifyjs": "uglifyjs-folder build -o build -e -x .js",
         "typescript": "tsc --build tsconfig.json",
-        "deploy": "yarn typedoc && gh-pages -d out && npm version patch && npm publish ./",
+        "deploy": "yarn typedoc && gh-pages -d out && npm version patch && echo 'All OK\nPlease run 'npm publish ./''",
         "push": "npm version patch && npm publish ./",
         "prepublishOnly": "yarn build",
         "typedoc": "typedoc ./src/",
