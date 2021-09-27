@@ -4,7 +4,7 @@
             "minify",
             {
                 "booleans": true,
-                "builtIns": true,
+                "builtIns": false,
                 "consecutiveAdds": true,
                 "deadcode": true,
                 "evaluate": true,

@@ -1,5 +1,6 @@
 import { curry2 } from './Curry';
 import gcd from './gcd';
+import valueSwap from './valueSwap';
 export interface LCM {
     (x: number, r: number): number;
     (x: number): (r: number) => number;
@@ -13,12 +14,7 @@ const lcm = curry2(function (n: number, r: number) {
     if (n === 0 || r === 0) {
         return 0;
     }
-    let tmp: number;
-    if (n < r) {
-        tmp = n;
-        n = r;
-        r = tmp;
-    }
+    [n, r] = valueSwap(n, r);
     return (n / gcd(n, r)) * r;
 }) as LCM;
 export default lcm;

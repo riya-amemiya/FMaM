@@ -5,6 +5,7 @@ import getArraysDiff from './getArraysDiff';
 import getArraysIntersect from './getArraysIntersect';
 import hanpu from './hanpu';
 import isDouble from './isDouble';
+import isNumber from './isNumber';
 import lcm from './lcm';
 import max from './max';
 import min from './min';
@@ -13,6 +14,7 @@ import nCrs from './nCrs';
 import nPr from './nPr';
 import quotient from './quotient';
 import reduce from './reduce';
+import valueSwap from './valueSwap';
 const FMaM = {
     gcd,
     fact,
@@ -29,5 +31,7 @@ const FMaM = {
     min,
     arraysJoin,
     isDouble,
+    isNumber,
+    valueSwap,
 };
 export { FMaM };

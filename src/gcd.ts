@@ -1,4 +1,5 @@
 import { curry2 } from './Curry';
+import valueSwap from './valueSwap';
 export interface GCD {
     (x: number, y: number): number;
     (x: number): (y: number) => number;
@@ -11,12 +12,8 @@ export interface GCD {
 const gcd = curry2(function (x: number, y: number) {
     if (x === 0 || y === 0) return 0;
     //最大公約数
-    let r: number, tmp: number;
-    if (y < x) {
-        tmp = y;
-        y = x;
-        x = tmp;
-    }
+    let r: number;
+    [x, y] = valueSwap(x, y);
     /* ユークリッドの互除法 */
     r = y % x;
     while (r !== 0) {
