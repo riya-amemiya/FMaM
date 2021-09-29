@@ -19,7 +19,8 @@
     "keywords": [],
     "author": "",
     "publishConfig": {
-        "access": "public"
+        "access": "public",
+        "registry": "https://github.com/riya81/FMaM"
     },
     "exclude": "/node_modules/",
     "license": "ISC",
@@ -64,6 +65,7 @@
     "dependencies": {
         "@babel/runtime": "^7.14.8",
         "@types/core-js": "^2.5.5",
+        "babel-plugin-minify-flip-comparisons": "^0.4.3",
         "fmam": "^1.0.1",
         "typescript": "4.2",
         "uglifyjs-folder": "^2.0.0"

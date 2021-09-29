@@ -35,3 +35,4 @@ const FMaM = {
     valueSwap,
 };
 export { FMaM };
+export default FMaM;
