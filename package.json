@@ -20,7 +20,7 @@
     "author": "Riya81",
     "publishConfig": {
         "access": "public",
-        "registry": "https://github.com/riya81/FMaM"
+        "registry": "https://registry.npmjs.org/"
     },
     "exclude": "/node_modules/",
     "license": "ISC",
