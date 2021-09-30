@@ -32,6 +32,9 @@ const test: AtLeast2<number | number[] | unknown[] | boolean>[] = [
     [FMaM.getArraysDiff([0, 1, 2, 3, 4], [0, 1, 2, 3, 4, 5, 6]), [5, 6]],
     [FMaM.isDouble(0.1), true],
     [FMaM.isDouble(1), false],
+    [FMaM.gcd(4, FMaM.gcd(6, 8)), 2],
+    [FMaM.lcm(4, FMaM.lcm(6, 8)), 24],
 ];
+FMaM.gcds(8, 10);
 
 fn_test(test);

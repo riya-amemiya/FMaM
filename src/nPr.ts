@@ -14,8 +14,8 @@ const nPr = curry2(function (n: number, r: number) {
     if (n === 0 || r === 0) {
         return NaN;
     }
-    let y = n,
-        x = 0;
+    let y = n;
+    let x = 0;
     while (x === 0) {
         if (r === 1) {
             y *= r;

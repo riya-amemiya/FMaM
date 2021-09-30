@@ -17,7 +17,7 @@
                 "numericLiterals": true,
                 "propertyLiterals": true,
                 "regexpConstructors": true,
-                "removeConsole": true,
+                "removeConsole": false,
                 "removeDebugger": true,
                 "removeUndefined": true,
                 "replace": true,

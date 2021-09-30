@@ -1,6 +1,7 @@
 import arraysJoin from './arraysJoin';
 import fact from './fact';
 import gcd from './gcd';
+import gcds from './gcds';
 import getArraysDiff from './getArraysDiff';
 import getArraysIntersect from './getArraysIntersect';
 import hanpu from './hanpu';
@@ -33,6 +34,7 @@ const FMaM = {
     isDouble,
     isNumber,
     valueSwap,
+    gcds,
 };
 export { FMaM };
 export default FMaM;
