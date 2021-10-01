@@ -9,7 +9,7 @@ export interface GETDECIMALLENGTH {
  */
 const getDecimalLength = curry1(function (value: number) {
     let x = (value + '').split('.')[1];
-    if (x !== undefined && x.length > 0) {
+    if (typeof x !== 'undefined' && x.length > 0) {
         return x.length;
     }
     return 0;
