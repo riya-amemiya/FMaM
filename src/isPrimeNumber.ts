@@ -1,5 +1,9 @@
 import { curry1 } from './Curry';
 import division from './division';
+interface ISPRIMENUMBER {
+    (x: number): boolean;
+    (): (x: number) => boolean;
+}
 /**
  * 素数判定
  */
@@ -13,5 +17,5 @@ const isPrimeNumber = curry1(function (n: number) {
         }
     }
     return true;
-});
+}) as ISPRIMENUMBER;
 export default isPrimeNumber;
