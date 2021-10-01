@@ -20,7 +20,7 @@ const fn_test = <X extends unknown[][]>(x: X) => {
     }
 };
 type AtLeast2<T> = [T, T, ...T[]];
-const test: AtLeast2<number | number[] | unknown[] | boolean>[] = [
+const test: AtLeast2<number | number[] | unknown[] | boolean | string>[] = [
     [FMaM.gcd(8, 9), 1],
     [FMaM.fact(3), 6],
     [FMaM.gcd(9, 3), 3],
@@ -30,11 +30,23 @@ const test: AtLeast2<number | number[] | unknown[] | boolean>[] = [
     [FMaM.nCr(4, 3), 4],
     [FMaM.getArraysIntersect([9, 313134], [3109, 9]), [9]],
     [FMaM.getArraysDiff([0, 1, 2, 3, 4], [0, 1, 2, 3, 4, 5, 6]), [5, 6]],
-    [FMaM.isDouble(0.1), true],
+    [FMaM.isDouble('0.1', false), false],
     [FMaM.isDouble(1), false],
+    [FMaM.isDouble('0.1'), true],
+    [FMaM.isDouble('1'), false],
+    [FMaM.isNumber(8), true],
+    [FMaM.isNumber(0.1), true],
+    [FMaM.isNumber('0.1'), true],
     [FMaM.gcd(4, FMaM.gcd(6, 8)), 2],
     [FMaM.lcm(4, FMaM.lcm(6, 8)), 24],
+    [FMaM.subtract(67, 66.9), 0.1],
+    [FMaM.multiplication(66.9, 100), 6690],
+    [FMaM.addition(67, 66.9), 133.9],
+    [FMaM.division(10.1, 101)[0], 0.1],
+    [FMaM.isPrimeNumber(11), true],
+    [FMaM.isPrimeNumber(12), false],
+    [FMaM.toBinary(2010, 16), '7da'],
 ];
-FMaM.gcds(8, 10);
+console.log(FMaM.primeFactorization(2021));
 
 fn_test(test);

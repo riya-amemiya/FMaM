@@ -1,8 +1,9 @@
+import { curry2 } from './Curry/curry2';
 /**
  * @param  {number} x
  * @param  {number} y
  */
-const valueSwap = (x: number, y: number) => {
+const valueSwap = curry2(function (x: number, y: number) {
     let tmp: number;
     if (y < x) {
         tmp = y;
@@ -10,5 +11,5 @@ const valueSwap = (x: number, y: number) => {
         x = tmp;
     }
     return [x, y];
-};
+});
 export default valueSwap;

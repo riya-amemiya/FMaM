@@ -14,7 +14,6 @@ const gcds = function (x?: number, y?: number, ...z: number[]) {
     if (typeof y === 'undefined') {
         return (y: number, ...z: number[]) => gcds(x, y, ...z);
     }
-
     let n: number = gcd(x, y);
     for (let i = 0; i < z.length; i++) {
         n = gcd(n, z[i]);
