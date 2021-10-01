@@ -3,6 +3,9 @@ export interface MIN {
     (x: number[]): number;
     (): (x: number[]) => number;
 }
+/**
+ * 最小値を返す
+ */
 const min = curry1(function (num: number[]) {
     return Math.min.apply(null, [...new Set(num)]);
 }) as MIN;

@@ -4,6 +4,7 @@ export interface TOBINARY {
 }
 /**
  * n進数に変換
+ * @param  {number} [radix=2] n進数
  */
 const toBinary = function (x?: number, radix: number = 2) {
     if (typeof x === 'undefined') {

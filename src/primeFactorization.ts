@@ -9,6 +9,9 @@ export interface PRIMEFACTORIZATION {
         count: number;
     }[];
 }
+/**
+ * 素因数分解
+ */
 const primeFactorization = curry1(function (x: number) {
     let n = 0;
     const out: { number: number; count: number }[] = [];

@@ -3,6 +3,9 @@ export interface RADTODEG {
     (x: number): void;
     (): (x: number) => void;
 }
+/**
+ * ラジアンを角度に変換
+ */
 const radToDeg = curry1(function (x: number) {
     return x / (Math.PI / 180);
 }) as RADTODEG;

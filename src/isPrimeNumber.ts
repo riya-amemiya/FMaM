@@ -1,5 +1,8 @@
 import { curry1 } from './Curry';
 import division from './division';
+/**
+ * 素数判定
+ */
 const isPrimeNumber = curry1(function (n: number) {
     if (n < 2) return false;
     else if (n == 2) return true;
