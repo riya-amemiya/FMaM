@@ -1,6 +1,6 @@
 {
     "name": "fmam",
-    "version": "2.0.9",
+    "version": "2.0.10",
     "description": "FMaM",
     "main": "./build/index.js",
     "types": "./build/index.d.ts",
