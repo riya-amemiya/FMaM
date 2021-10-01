@@ -47,5 +47,6 @@ const test: AtLeast2<number | number[] | unknown[] | boolean | string>[] = [
     [FMaM.isPrimeNumber(12), false],
     [FMaM.toBinary(2010, 16), '7da'],
 ];
+console.log(FMaM.primeFactorization(2021));
 
 fn_test(test);

@@ -20,6 +20,7 @@ import multiplication from './multiplication';
 import nCr from './nCr';
 import nCrs from './nCrs';
 import nPr from './nPr';
+import primeFactorization from './primeFactorization';
 import quotient from './quotient';
 import radToDeg from './radToDeg';
 import reduce from './reduce';
@@ -55,6 +56,7 @@ const FMaM = {
     toBinary,
     degToRad,
     radToDeg,
+    primeFactorization,
 };
 export { FMaM };
 export default FMaM;
