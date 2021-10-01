@@ -1,6 +1,6 @@
 import { curry2 } from './Curry/curry2';
 import getDecimalLength from './getDecimalLength';
-interface MULTIPLICATION {
+export interface MULTIPLICATION {
     (a: number, b: number): number;
     (a: number): (b: number) => number;
 }

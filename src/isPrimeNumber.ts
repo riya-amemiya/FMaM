@@ -1,6 +1,6 @@
 import { curry1 } from './Curry';
 import division from './division';
-interface ISPRIMENUMBER {
+export interface ISPRIMENUMBER {
     (x: number): boolean;
     (): (x: number) => boolean;
 }
