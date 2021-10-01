@@ -9,6 +9,7 @@ import getArraysIntersect from './getArraysIntersect';
 import getDecimalLength from './getDecimalLength';
 import hanpu from './hanpu';
 import isDouble from './isDouble';
+import isNode from './isNode';
 import isNumber from './isNumber';
 import isPrimeNumber from './isPrimeNumber';
 import lcm from './lcm';
@@ -21,6 +22,7 @@ import nPr from './nPr';
 import quotient from './quotient';
 import reduce from './reduce';
 import subtract from './subtract';
+import toBinary from './toBinary';
 import valueSwap from './valueSwap';
 const FMaM = {
     gcd,
@@ -47,6 +49,8 @@ const FMaM = {
     addition,
     division,
     isPrimeNumber,
+    isNode,
+    toBinary,
 };
 export { FMaM };
 export default FMaM;

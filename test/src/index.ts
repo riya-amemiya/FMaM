@@ -20,7 +20,7 @@ const fn_test = <X extends unknown[][]>(x: X) => {
     }
 };
 type AtLeast2<T> = [T, T, ...T[]];
-const test: AtLeast2<number | number[] | unknown[] | boolean>[] = [
+const test: AtLeast2<number | number[] | unknown[] | boolean | string>[] = [
     [FMaM.gcd(8, 9), 1],
     [FMaM.fact(3), 6],
     [FMaM.gcd(9, 3), 3],
@@ -45,6 +45,8 @@ const test: AtLeast2<number | number[] | unknown[] | boolean>[] = [
     [FMaM.division(10.1, 101)[0], 0.1],
     [FMaM.isPrimeNumber(11), true],
     [FMaM.isPrimeNumber(12), false],
+    [FMaM.toBinary(2010, 16), '7da'],
 ];
+console.log(FMaM.toBinary(-2010, 16));
 
 fn_test(test);
