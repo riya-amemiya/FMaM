@@ -1,5 +1,6 @@
 import addition from './addition';
 import arraysJoin from './arraysJoin';
+import degToRad from './degToRad';
 import division from './division';
 import fact from './fact';
 import gcd from './gcd';
@@ -20,6 +21,7 @@ import nCr from './nCr';
 import nCrs from './nCrs';
 import nPr from './nPr';
 import quotient from './quotient';
+import radToDeg from './radToDeg';
 import reduce from './reduce';
 import subtract from './subtract';
 import toBinary from './toBinary';
@@ -51,6 +53,8 @@ const FMaM = {
     isPrimeNumber,
     isNode,
     toBinary,
+    degToRad,
+    radToDeg,
 };
 export { FMaM };
 export default FMaM;
