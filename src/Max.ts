@@ -1,9 +1,12 @@
-import { curry1 } from './Curry';
 export interface MAX {
-    (x: number[]): number;
-    (): (x: number[]) => number;
+    (...num: number[]): number;
+    (): (...num: number[]) => number;
 }
-const max = curry1(function (num: number[]) {
-    return Math.max.apply(null, [...new Set(num)]);
-}) as MAX;
+const max = function (...num: number[]) {
+    if (typeof num === 'undefined') {
+        return (...num: number[]) => Math.max.apply(null, [...new Set(num)]);
+    } else {
+        return Math.max.apply(null, [...new Set(num)]);
+    }
+} as MAX;
 export default max;
