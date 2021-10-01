@@ -43,6 +43,8 @@ const test: AtLeast2<number | number[] | unknown[] | boolean>[] = [
     [FMaM.multiplication(66.9, 100), 6690],
     [FMaM.addition(67, 66.9), 133.9],
     [FMaM.division(10.1, 101)[0], 0.1],
+    [FMaM.isPrimeNumber(11), true],
+    [FMaM.isPrimeNumber(12), false],
 ];
 
 fn_test(test);
