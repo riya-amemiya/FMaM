@@ -4,3 +4,4 @@ demo
 out
 build
 babel
+.DS_Store
