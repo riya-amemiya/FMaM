@@ -1,16 +1,17 @@
 import { curry1 } from './Curry';
 export interface PRIMEFACTORIZATION {
-    (a: number): {
+    (x: number): {
         number: number;
         count: number;
     }[];
-    (): (a: number) => {
+    (): (x: number) => {
         number: number;
         count: number;
     }[];
 }
 /**
  * 素因数分解
+ * @param  {number} x
  */
 const primeFactorization = curry1(function (x: number) {
     let n = 0;

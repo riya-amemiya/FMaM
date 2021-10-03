@@ -4,6 +4,8 @@ export interface GETARRAYSDIFF {
 }
 /**
  * 共通しない要素をとりだす
+ * @param  {any[]} array
+ * @param  {any[]} ...arrays
  */
 const getArraysDiff = ((array: any[], ...arrays: any[]) => {
     if (typeof array === 'undefined') {

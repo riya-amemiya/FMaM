@@ -4,6 +4,8 @@ export interface ARRAYSJOIN {
 }
 /**
  * 重複をしないで結合
+ * @param  {any[]} array
+ * @param  {any[]} ...arrays
  */
 const arraysJoin = ((array: any[], ...arrays: any[]) => {
     if (typeof array === 'undefined') {

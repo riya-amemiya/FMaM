@@ -4,6 +4,7 @@ export interface MAX {
 }
 /**
  * 最大値を返す
+ * @param  {number[]} ...num
  */
 const max = function (...num: number[]) {
     if (typeof num === 'undefined') {

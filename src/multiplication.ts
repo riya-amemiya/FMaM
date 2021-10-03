@@ -1,8 +1,8 @@
 import { curry2 } from './Curry/curry2';
 import getDecimalLength from './getDecimalLength';
 export interface MULTIPLICATION {
-    (a: number, b: number): number;
-    (a: number): (b: number) => number;
+    (x: number, y: number): number;
+    (x: number): (y: number) => number;
 }
 /**
  * 誤差のない掛け算

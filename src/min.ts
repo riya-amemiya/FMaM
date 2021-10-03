@@ -4,6 +4,7 @@ export interface MIN {
 }
 /**
  * 最小値を返す
+ * @param  {number} num
  */
 const min = function (num: number[]) {
     if (typeof num === 'undefined') {

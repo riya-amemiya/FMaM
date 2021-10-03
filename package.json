@@ -6,7 +6,7 @@
     "types": "./build/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "babel": "babel build --extensions '.js' --out-dir build --copy-files",
+        "babel": "babel build --extensions '.js' --out-dir build --copy-files -M",
         "build": "yarn typescript && yarn babel && yarn uglifyjs",
         "uglifyjs": "uglifyjs-folder build -o build -e -x .js",
         "typescript": "tsc --build tsconfig.json",

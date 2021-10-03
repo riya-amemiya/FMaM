@@ -6,6 +6,7 @@ export interface ISPRIMENUMBER {
 }
 /**
  * 素数判定
+ * @param  {number} n
  */
 const isPrimeNumber = curry1(function (n: number) {
     if (n < 2) return false;

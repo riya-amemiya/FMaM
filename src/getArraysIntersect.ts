@@ -4,6 +4,8 @@ export interface GETARRAYSINTERSECT {
 }
 /**
  * 共通の要素をとりだす
+ * @param  {any[]} array
+ * @param  {any[]} ...arrays
  */
 const getArraysIntersect = ((array: any[], ...arrays: any[]) => {
     if (typeof array === 'undefined') {

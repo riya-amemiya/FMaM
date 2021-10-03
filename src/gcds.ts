@@ -6,6 +6,9 @@ export interface GCDS {
 }
 /**
  * 3つ以上の自然数の最大公約数
+ * @param  {number} x
+ * @param  {number} y
+ * @param  {number} ...z
  */
 const gcds = function (x?: number, y?: number, ...z: number[]) {
     if (typeof x === 'undefined') {
