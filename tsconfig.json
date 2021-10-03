@@ -9,7 +9,7 @@
     "module": "CommonJS",
     "jsx": "react",
     "noEmit": false,
-    "removeComments": true,
+    "removeComments": false,
     "allowJs": false,
     "strict": false,
     "alwaysStrict": true,

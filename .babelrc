@@ -1,33 +1,6 @@
 {
     "presets": [
         [
-            "minify",
-            {
-                "booleans": true,
-                "builtIns": false,
-                "consecutiveAdds": true,
-                "deadcode": true,
-                "evaluate": true,
-                "flipComparisons": true,
-                "guards": true,
-                "infinity": true,
-                "mangle": true,
-                "memberExpressions": true,
-                "mergeVars": true,
-                "numericLiterals": true,
-                "propertyLiterals": true,
-                "regexpConstructors": true,
-                "removeConsole": false,
-                "removeDebugger": true,
-                "removeUndefined": true,
-                "replace": true,
-                "simplify": true,
-                "simplifyComparisons": true,
-                "typeConstructors": true,
-                "undefinedToVoid": true
-            }
-        ],
-        [
             "@babel/env",
             {
                 "spec": true,
@@ -95,6 +68,24 @@
         ],
         [
             "@babel/plugin-transform-runtime"
+        ],
+        [
+            "minify-simplify"
+        ],
+        [
+            "minify-type-constructors"
+        ],
+        [
+            "minify-mangle-names"
+        ],
+        [
+            "minify-guarded-expressions"
+        ],
+        [
+            "minify-constant-folding"
+        ],
+        [
+            "minify-dead-code-elimination"
         ]
     ]
 }

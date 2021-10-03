@@ -6,9 +6,8 @@
     "types": "./build/index.d.ts",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "babel": "babel build --extensions '.js' --out-dir build --copy-files -M",
-        "build": "yarn typescript && yarn babel && yarn uglifyjs",
-        "uglifyjs": "uglifyjs-folder build -o build -e -x .js",
+        "babel": "babel build --extensions '.js' --out-dir build --copy-files",
+        "build": "yarn typescript && yarn babel",
         "typescript": "tsc --build tsconfig.json",
         "deploy": "yarn typedoc && gh-pages -d out && npm version patch && echo 'All OK\nPlease run 'npm publish ./''",
         "push": "npm version patch && npm publish ./",
@@ -52,10 +51,17 @@
         "@types/eslint": "^7.2.10",
         "babel-jest": "^26.3.0",
         "babel-loader": "^8.1.0",
+        "babel-plugin-minify-constant-folding": "^0.5.0",
+        "babel-plugin-minify-dead-code-elimination": "^0.5.1",
         "babel-plugin-minify-flip-comparisons": "^0.4.3",
+        "babel-plugin-minify-guarded-expressions": "^0.4.4",
+        "babel-plugin-minify-mangle-names": "^0.5.0",
+        "babel-plugin-minify-simplify": "^0.5.1",
+        "babel-plugin-minify-type-constructors": "^0.4.3",
         "babel-plugin-remove-unused-vars": "^2.2.0",
         "babel-plugin-transform-inline-environment-variables": "^0.4.3",
-        "babel-preset-minify": "^0.5.1",
+        "babel-plugin-transform-merge-sibling-variables": "^6.9.4",
+        "babel-plugin-transform-minify-booleans": "^6.9.4",
         "babel-runtime": "^6.26.0",
         "es6-promise": "^4.2.8",
         "fmam": "^2.0.6",
@@ -64,8 +70,7 @@
         "ts-loader": "^8.0.14",
         "ts-node": "^9.1.1",
         "typedoc": "^0.20.36",
-        "typescript": "4.2",
-        "uglifyjs-folder": "^3.0.0"
+        "typescript": "4.2"
     },
     "dependencies": {
         "@babel/runtime": "^7.14.8"
