@@ -1,12 +1,13 @@
 export interface FACT {
     (): (x: number, y?: number) => number;
+    /**
+     * 階乗
+     * @param  {number} x
+     * @param  {number} y
+     */
     (x: number, y?: number): number;
 }
-/**
- * 階乗
- * @param  {number} x
- * @param  {number} y
- */
+
 const fact = ((x?: number, y: number = 1) => {
     if (typeof x === 'undefined') {
         return (x: number, y: number = 1) => fact(x, y);

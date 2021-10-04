@@ -1,4 +1,4 @@
-import { FMaM } from '../../build';
+import { FMaM } from 'fmam';
 
 const fn_test = <X extends unknown[][]>(x: X) => {
     for (const i of x) {
@@ -19,8 +19,7 @@ const fn_test = <X extends unknown[][]>(x: X) => {
         }
     }
 };
-type AtLeast2<T> = [T, T, ...T[]];
-const test: AtLeast2<number | number[] | unknown[] | boolean | string>[] = [
+const test = [
     [FMaM.gcd(8, 9), 1],
     [FMaM.fact(3), 6],
     [FMaM.gcd(9, 3), 3],
@@ -45,12 +44,7 @@ const test: AtLeast2<number | number[] | unknown[] | boolean | string>[] = [
     [FMaM.division(10.1, 101)[0], 0.1],
     [FMaM.isPrimeNumber(11), true],
     [FMaM.isPrimeNumber(12), false],
+    [FMaM.isPrimeNumber(1), false],
     [FMaM.toBinary(2010, 16), '7da'],
 ];
-const startTime = FMaM.multiplication(performance.now(), 1000);
-console.log(FMaM.primeFactorization(112373));
-const endTime = performance.now();
-console.log(endTime - startTime);
-
-console.log(FMaM.gcd(21800701591, 112373));
 fn_test(test);

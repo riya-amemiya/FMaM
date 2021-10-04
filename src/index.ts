@@ -8,7 +8,6 @@ import gcds from './gcds';
 import getArraysDiff from './getArraysDiff';
 import getArraysIntersect from './getArraysIntersect';
 import getDecimalLength from './getDecimalLength';
-import hanpu from './hanpu';
 import isDouble from './isDouble';
 import isNode from './isNode';
 import isNumber from './isNumber';
@@ -24,6 +23,7 @@ import primeFactorization from './primeFactorization';
 import quotient from './quotient';
 import radToDeg from './radToDeg';
 import reduce from './reduce';
+import repeatedTrial from './repeatedTrial';
 import subtract from './subtract';
 import toBinary from './toBinary';
 import valueSwap from './valueSwap';
@@ -36,7 +36,7 @@ const FMaM = {
     nPr,
     quotient,
     reduce,
-    hanpu,
+    repeatedTrial,
     getArraysIntersect,
     getArraysDiff,
     max,
