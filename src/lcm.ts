@@ -2,19 +2,19 @@ import { curry2 } from './Curry';
 import gcd from './gcd';
 import valueSwap from './valueSwap';
 export interface LCM {
-    (x: number, r: number): number;
-    (x: number): (r: number) => number;
+    (x: number, y: number): number;
+    (x: number): (y: number) => number;
 }
 /**
  * 最小公倍数
- * @param  {number} n
- * @param  {number} r
+ * @param  {number} x
+ * @param  {number} y
  */
-const lcm = curry2(function (n: number, r: number) {
-    if (n === 0 || r === 0) {
+const lcm = curry2(function (x: number, y: number) {
+    if (x === 0 || y === 0) {
         return 0;
     }
-    [n, r] = valueSwap(n, r);
-    return (n / gcd(n, r)) * r;
+    [x, y] = valueSwap(x, y);
+    return (x / gcd(x, y)) * y;
 }) as LCM;
 export default lcm;

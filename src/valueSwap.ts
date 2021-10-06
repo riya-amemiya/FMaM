@@ -4,7 +4,7 @@ export interface DIVISION {
     (a: number): (b: number) => number[];
 }
 /**
- * xとyの値をxが最大値、yが最小値になるように入れ替える
+ * x < yになるように入れ替える
  * @param  {number} x
  * @param  {number} y
  */

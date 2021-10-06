@@ -31,7 +31,7 @@
             "@babel/env",
             {
                 "spec": true,
-                "modules": "umd",
+                "modules": "cjs",
                 "shippedProposals": true
             }
         ],
