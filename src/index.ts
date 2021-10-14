@@ -1,5 +1,6 @@
 import addition from './addition';
 import arraysJoin from './arraysJoin';
+import calculator from './calculator';
 import degToRad from './degToRad';
 import division from './division';
 import fact from './fact';
@@ -23,11 +24,13 @@ import primeFactorization from './primeFactorization';
 import quickSort from './quickSort';
 import quotient from './quotient';
 import radToDeg from './radToDeg';
+import random from './random';
 import reduce from './reduce';
 import repeatedTrial from './repeatedTrial';
 import subtract from './subtract';
 import toBinary from './toBinary';
 import valueSwap from './valueSwap';
+
 export { FMaM };
 const FMaM = {
     gcd,
@@ -60,5 +63,7 @@ const FMaM = {
     radToDeg,
     primeFactorization,
     quickSort,
+    calculator,
+    random,
 };
 export default FMaM;

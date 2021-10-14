@@ -7,6 +7,7 @@ export interface RANDOM {
  * 整数の乱数
  * @param  {number} num
  */
-export const random = curry1(function (num: number) {
+const random = curry1(function (num: number) {
     return Math.floor(Math.random() * (num || 1));
 }) as RANDOM;
+export default random;

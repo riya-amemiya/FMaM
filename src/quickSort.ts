@@ -4,6 +4,7 @@ export interface QUICKSORT {
     <T>(array: T[], startID: number): (endID: number) => T[];
     <T>(array: T[]): (startID: number, endID: number) => T[];
 }
+//配列を高速にソート
 const quickSort = curry3(function (array: any[], startID: number, endID: number) {
     const pivot = array[Math.floor((startID + endID) / 2)];
     let left = startID;

@@ -1,4 +1,4 @@
-import { FMaM } from 'fmam';
+import { FMaM } from '../../build';
 
 const fn_test = <X extends unknown[][]>(x: X) => {
     for (const i of x) {
@@ -23,7 +23,7 @@ const test = [
     [FMaM.gcd(8, 9), 1],
     [FMaM.fact(3), 6],
     [FMaM.gcd(9, 3), 3],
-    [FMaM.hanpu(5, 2, { x: 1, y: 4 }), [135, 512]],
+    [FMaM.repeatedTrial(5, 2, { x: 1, y: 4 }), [135, 512]],
     [FMaM.lcm(8, 9), 72],
     [FMaM.nCr(81, 2), 3240],
     [FMaM.nCr(4, 3), 4],
@@ -47,7 +47,6 @@ const test = [
     [FMaM.isPrimeNumber(1), false],
     [FMaM.toBinary(2010, 16), '7da'],
 ];
-console.log((94 * (Math.PI / 180)) / 90);
-console.log((94 * FMaM.division(Math.PI, 180)[0]) / 90);
+console.log(FMaM.calculator('8+9*3-9/6*9*9.5'));
 
 fn_test(test);
