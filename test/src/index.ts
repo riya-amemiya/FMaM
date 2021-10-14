@@ -47,4 +47,7 @@ const test = [
     [FMaM.isPrimeNumber(1), false],
     [FMaM.toBinary(2010, 16), '7da'],
 ];
+console.log((94 * (Math.PI / 180)) / 90);
+console.log((94 * FMaM.division(Math.PI, 180)[0]) / 90);
+
 fn_test(test);

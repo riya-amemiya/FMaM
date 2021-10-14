@@ -1,10 +1,10 @@
 export type ArgumentTypes<F extends Function> = F extends (...args: infer A) => any ? A : never;
 export interface CURRY1 {
-    <T extends (a: A) => ReturnType<T>, A extends any>(fn: T): {
+    <T extends (a: A) => ReturnType<T>, A extends any | any[]>(fn: T): {
         (a: ArgumentTypes<typeof fn>[0]): ReturnType<T>;
         (): (a: ArgumentTypes<typeof fn>[0]) => ReturnType<T>;
     };
-    <T extends <A extends any>(a: A) => ReturnType<T>>(fn: T): {
+    <T extends <A extends any | any[]>(a: A) => ReturnType<T>>(fn: T): {
         <A, B>(a: A): B;
         (): <A, B>(a: A) => B;
     };

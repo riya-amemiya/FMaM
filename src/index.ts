@@ -20,6 +20,7 @@ import nCr from './nCr';
 import nCrs from './nCrs';
 import nPr from './nPr';
 import primeFactorization from './primeFactorization';
+import quickSort from './quickSort';
 import quotient from './quotient';
 import radToDeg from './radToDeg';
 import reduce from './reduce';
@@ -27,6 +28,7 @@ import repeatedTrial from './repeatedTrial';
 import subtract from './subtract';
 import toBinary from './toBinary';
 import valueSwap from './valueSwap';
+export { FMaM };
 const FMaM = {
     gcd,
     fact,
@@ -57,6 +59,6 @@ const FMaM = {
     degToRad,
     radToDeg,
     primeFactorization,
+    quickSort,
 };
-export { FMaM };
 export default FMaM;

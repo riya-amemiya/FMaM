@@ -4,10 +4,12 @@ export interface REDUCE {
     (x: number, y: number): {
         x: number;
         y: number;
+        gcd?: number;
     };
     (x: number): (y: number) => {
         x: number;
         y: number;
+        gcd?: number;
     };
 }
 /**
