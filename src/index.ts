@@ -30,9 +30,42 @@ import repeatedTrial from './repeatedTrial';
 import subtract from './subtract';
 import toBinary from './toBinary';
 import valueSwap from './valueSwap';
-
-export { FMaM };
 const FMaM = {
+    gcd,
+    fact,
+    lcm,
+    nCr,
+    nCrs,
+    nPr,
+    quotient,
+    reduce,
+    repeatedTrial,
+    getArraysIntersect,
+    getArraysDiff,
+    max,
+    min,
+    arraysJoin,
+    isDouble,
+    isNumber,
+    valueSwap,
+    gcds,
+    getDecimalLength,
+    subtract,
+    multiplication,
+    addition,
+    division,
+    isPrimeNumber,
+    isNode,
+    toBinary,
+    degToRad,
+    radToDeg,
+    primeFactorization,
+    quickSort,
+    calculator,
+    random,
+};
+export {
+    FMaM,
     gcd,
     fact,
     lcm,
