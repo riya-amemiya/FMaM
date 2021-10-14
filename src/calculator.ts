@@ -75,11 +75,6 @@ const calculator = curry1(function (x: string) {
                     }`,
                 ),
             );
-        } else {
-            const z = x.match(/\d+\.?(\d+)?((\+|\-)+\d+\.?(\d+)?)/);
-            if (z) {
-                console.log(z[2]);
-            }
         }
         return x;
     } else {
