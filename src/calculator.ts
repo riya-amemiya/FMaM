@@ -33,12 +33,10 @@ const calculator = curry1(function (x: string) {
         }
     } else if (x.indexOf('*') != -1 || x.indexOf('/') != -1) {
         const y: [RegExpMatchArray | null, string[]] = [x.match(/\d+\.?(\d+)?(\*|\/)\d+\.?(\d+)?/), ['']];
-
         if (y[0]) {
             y[1] = y[0][0].split(/(\d+\.\d+)|(\d+)/g).filter((n) => {
                 return typeof n != 'undefined' && n != '';
             });
-
             return calculator(
                 x.replace(
                     y[0][0],
