@@ -47,6 +47,9 @@ const test = [
     [FMaM.isPrimeNumber(1), false],
     [FMaM.toBinary(2010, 16), '7da'],
 ];
-console.log(FMaM.calculator('8+(9*3-9/6*(9+9.5))'));
+console.log(FMaM.calculator('8+9*3-0*(9/6)*(9+9.5)'));
+
+const a = ['0', 1, 4, '10', '4', 5, 'Hello', 'A'];
+console.log(FMaM.quickSort(a, 0, 5));
 
 fn_test(test);

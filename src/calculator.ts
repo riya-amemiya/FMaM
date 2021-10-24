@@ -8,22 +8,17 @@ export interface CALCULATOR {
     (): (x: string) => string;
 }
 let n = 0;
-/**
- * @param  {string} x
- * 電卓()や符号に対応
- * xなどの文字は未対応
- */
-const calculator = curry1(function (x: string) {
-    if (n === 0) {
-        x = x.replace(/\s+/g, '');
 
+const calculator = curry1(function (x: string) {
+    if (n == 0) {
+        x = x.replace(/\s+/g, '');
         n++;
     }
+
     x = x.replace(/--/g, '+');
     x = x.replace(/\+\+/g, '+');
     x = x.replace(/\+-/g, '+0-');
     x = x.replace(/\-\+/g, '+0-');
-
     if (x.indexOf('(') != -1 || x.indexOf(')') != -1) {
         const y = x.match(/\(\d+\.?(\d+)?(\*|\/|\+|\-)\d+\.?(\d+)?\)/);
         if (y) {
@@ -58,7 +53,6 @@ const calculator = curry1(function (x: string) {
         return x;
     } else if (x.indexOf('+') != -1 || x.indexOf('-') != -1) {
         let y: [RegExpMatchArray | null, string[]] = [x.match(/\d+\.?(\d+)?(\+|\-)\d+\.?(\d+)?/), ['']];
-
         if (y[0]) {
             y[1] = y[0][0].split(/(\d+\.\d+)|(\d+)/g).filter((n) => {
                 return typeof n != 'undefined' && n !== '';
@@ -81,4 +75,5 @@ const calculator = curry1(function (x: string) {
         return x;
     }
 }) as CALCULATOR;
+
 export default calculator;

@@ -30,6 +30,7 @@ import repeatedTrial from './repeatedTrial';
 import subtract from './subtract';
 import toBinary from './toBinary';
 import valueSwap from './valueSwap';
+
 const FMaM = {
     gcd,
     fact,

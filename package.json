@@ -7,10 +7,13 @@
     "scripts": {
         "test": "yarn ts-node",
         "babel": "babel build --extensions '.js' --out-dir build --copy-files",
+        "swc": "swc build --extensions '.js' --out-dir build --copy-files",
         "build": "yarn typescript && yarn babel",
+        "tsc": "tsc --build tsconfig.json",
         "typescript": "tsc --build tsconfig.json",
         "deploy": "yarn typedoc && gh-pages -d out && npm version patch && echo 'All OK\nPlease run 'npm publish ./''",
         "push": "npm version patch && npm publish ./",
+        "page": "yarn typedoc && gh-pages -d out",
         "prepublishOnly": "yarn build",
         "typedoc": "typedoc ./src/",
         "ts-node": "ts-node --project test/tsconfig.json test/src/index.ts"
@@ -46,6 +49,8 @@
         "@babel/plugin-transform-template-literals": "^7.12.13",
         "@babel/preset-env": "^7.12.13",
         "@babel/preset-typescript": "^7.12.13",
+        "@swc/cli": "^0.1.51",
+        "@swc/core": "^1.2.99",
         "@types/common-tags": "^1.8.0",
         "@types/core-js": "^2.5.5",
         "@types/eslint": "^7.2.10",

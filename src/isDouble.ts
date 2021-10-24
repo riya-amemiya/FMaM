@@ -1,10 +1,9 @@
 export interface ISDOUBLE {
-    (): (x: any, loose?: boolean) => boolean;
-    (x: any, loose?: boolean): boolean;
+    (): <T extends string | number>(x: T, loose?: boolean) => boolean;
+    <T extends string | number>(x: T, loose?: boolean): boolean;
 }
 /**
  * 小数点を含むかどうか
- * @param  {any} x
  */
 const isDouble = function (x?: any, loose: boolean = true) {
     if (typeof x === 'undefined') {
@@ -12,8 +11,7 @@ const isDouble = function (x?: any, loose: boolean = true) {
     }
     if (loose) {
         return isFinite(x) && !Number.isNaN(x) && Number.isFinite(Number(x)) && !Number.isInteger(Number(x));
-    } else {
-        return x !== null && typeof x !== 'boolean' && Number.isFinite(x);
     }
+    return x !== null && typeof x !== 'boolean' && Number.isFinite(x);
 } as ISDOUBLE;
 export default isDouble;
