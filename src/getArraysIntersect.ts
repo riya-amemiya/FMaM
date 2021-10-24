@@ -1,7 +1,11 @@
 export type ElemenType<X extends readonly any[] | any> = X extends readonly (infer A)[] ? A : never;
+export type RType<X extends any, Y extends any> = X extends Y ? X : never;
 export interface GETARRAYSINTERSECT {
-    (): <X extends unknown[], Y extends unknown[]>(array: X, ...arrays: Y) => (ElemenType<X> | ElemenType<ElemenType<Y>>)[];
-    <X extends unknown[], Y extends unknown[]>(array: X, ...arrays: Y): (ElemenType<X> | ElemenType<ElemenType<Y>>)[];
+    (): <X extends unknown[], Y extends unknown[]>(
+        array: X,
+        ...arrays: Y
+    ) => RType<ElemenType<X>, ElemenType<ElemenType<Y>>>[];
+    <X extends unknown[], Y extends unknown[]>(array: X, ...arrays: Y): RType<ElemenType<X>, ElemenType<ElemenType<Y>>>[];
 }
 /**
  * 共通の要素をとりだす
