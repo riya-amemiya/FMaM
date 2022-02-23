@@ -1,4 +1,4 @@
-import { curry1 } from './Curry';
+import { curry1 } from './Curry/curry1';
 import division from './division';
 export interface ISPRIMENUMBER {
     (x: number): boolean;

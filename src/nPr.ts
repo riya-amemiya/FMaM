@@ -1,4 +1,4 @@
-import { curry2 } from './Curry';
+import { curry2 } from './Curry/curry2';
 
 export interface NPR {
     (n: number, r: number): number;

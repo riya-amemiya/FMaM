@@ -1,4 +1,4 @@
-import { curry2 } from './Curry';
+import { curry2 } from './Curry/curry2';
 import gcd from './gcd';
 export interface REDUCE {
     (x: number, y: number): {

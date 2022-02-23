@@ -1,5 +1,5 @@
 import addition from './addition';
-import { curry1 } from './Curry';
+import { curry1 } from './Curry/curry1';
 import division from './division';
 import multiplication from './multiplication';
 import subtract from './subtract';

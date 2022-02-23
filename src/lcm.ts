@@ -1,4 +1,4 @@
-import { curry2 } from './Curry';
+import { curry2 } from './Curry/curry2';
 import gcd from './gcd';
 import valueSwap from './valueSwap';
 export interface LCM {

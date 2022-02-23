@@ -1,4 +1,4 @@
-import { curry2 } from './Curry';
+import { curry2 } from './Curry/curry2';
 import getDecimalLength from './getDecimalLength';
 export interface DIVISION {
     (x: number, y: number): number[];

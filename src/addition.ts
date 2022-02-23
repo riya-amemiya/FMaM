@@ -15,4 +15,5 @@ const addition = curry2(function (x: number, y: number) {
     const z = Math.pow(10, max(getDecimalLength(x), getDecimalLength(y)));
     return (multiplication(x, z) + multiplication(y, z)) / z;
 }) as ADDITION;
+
 export default addition;

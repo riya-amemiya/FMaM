@@ -31,8 +31,10 @@ const test = [
     [FMaM.getArraysDiff([0, 1, 2, 3, 4], [0, 1, 2, 3, 4, 5, 6]), [5, 6]],
     [FMaM.isDouble('0.1', false), false],
     [FMaM.isDouble(1), false],
+    [FMaM.isDouble('1', false), false],
     [FMaM.isDouble('0.1'), true],
-    [FMaM.isDouble('1'), false],
+    [FMaM.isDouble(0.1, false), true],
+    [FMaM.isDouble(1, false), false],
     [FMaM.isNumber(8), true],
     [FMaM.isNumber(0.1), true],
     [FMaM.isNumber('0.1'), true],
@@ -48,5 +50,10 @@ const test = [
     [FMaM.toBinary(2010, 16), '7da'],
 ];
 console.log(FMaM.getArraysIntersect([9, 313134], [3109]));
+const ninja = [6, 9, '3'];
+const judge = ninja.every((item) => {
+    return (typeof item !== 'string' && Number.isFinite(item) && Number.isInteger(Number(item))) != false;
+});
+console.log(judge);
 
 fn_test(test);

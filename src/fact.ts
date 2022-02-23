@@ -1,24 +1,19 @@
-export interface FACT {
-    (): (x: number, y?: number) => number;
+import { curry1 } from './Curry/curry1';
 
-    (x: number, y?: number): number;
+export interface FACT {
+    (): (x: number) => number;
+
+    (x: number): number;
 }
 /**
  * 階乗
  * @param  {number} x
- * @param  {number} y
  */
-const fact = ((x?: number, y: number = 1) => {
-    if (typeof x === 'undefined') {
-        return (x: number, y: number = 1) => fact(x, y);
-    }
-    if (x === 0 || x < y) {
-        if (y === 0) {
-            return NaN;
-        }
+const fact = curry1(function (x: number) {
+    if (x === 0) {
         return 1;
     } else {
-        return x * fact(x - 1, y);
+        return x * fact(x - 1);
     }
 }) as FACT;
 export default fact;

@@ -1,4 +1,4 @@
-import { curry3 } from './Curry';
+import { curry3 } from './Curry/curry3';
 export interface QUICKSORT {
     <T>(array: T[], startID: number, endID: number): T[];
     <T>(array: T[], startID: number): (endID: number) => T[];

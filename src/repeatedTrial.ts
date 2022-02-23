@@ -1,4 +1,4 @@
-import { curry3 } from './Curry';
+import { curry3 } from './Curry/curry3';
 import reduce from './reduce';
 export interface REPEATEDTRIAL {
     (

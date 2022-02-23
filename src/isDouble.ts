@@ -12,6 +12,8 @@ const isDouble = function (x?: any, loose: boolean = true) {
     if (loose) {
         return isFinite(x) && !Number.isNaN(x) && Number.isFinite(Number(x)) && !Number.isInteger(Number(x));
     }
-    return x !== null && typeof x !== 'boolean' && Number.isFinite(x);
+    return (
+        typeof x !== 'string' && x !== null && typeof x !== 'boolean' && Number.isFinite(x) && !Number.isInteger(Number(x))
+    );
 } as ISDOUBLE;
 export default isDouble;

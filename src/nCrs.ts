@@ -1,4 +1,4 @@
-import { curry2 } from './Curry';
+import { curry2 } from './Curry/curry2';
 import nCr from './nCr';
 export interface NCRS {
     (n: number, r: number): number;

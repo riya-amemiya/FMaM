@@ -1,4 +1,4 @@
-import { curry2 } from './Curry';
+import { curry2 } from './Curry/curry2';
 export interface QUOTIENT {
     (x: number, y: number): number[];
     (x: number): (y: number) => number[];

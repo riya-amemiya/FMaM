@@ -1,4 +1,4 @@
-import { curry1 } from './Curry';
+import { curry1 } from './Curry/curry1';
 export interface RANDOM {
     (x: number): number;
     (): (x: number) => number;

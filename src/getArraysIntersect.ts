@@ -13,7 +13,7 @@ export interface GETARRAYSINTERSECT {
  * @param  {any[]} ...arrays
  */
 const getArraysIntersect = ((array: any[], ...arrays: any[]) => {
-    if (typeof array === 'undefined') {
+    if ('undefined' === typeof array) {
         return (array: any[], ...arrays: any[]) => getArraysIntersect(array, arrays);
     }
     let hasArr: any[] = [];
